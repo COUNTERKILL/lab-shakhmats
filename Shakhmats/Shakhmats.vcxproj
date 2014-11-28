@@ -79,10 +79,14 @@
     <ClInclude Include="FiguresEnums.h" />
     <ClInclude Include="KingClass.h" />
     <ClInclude Include="KnightClass.h" />
+    <ClInclude Include="TextColor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoardClass.cpp" />
     <ClCompile Include="FiguresClass.cpp" />
+    <ClCompile Include="KingClass.cpp" />
+    <ClCompile Include="KnightClass.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

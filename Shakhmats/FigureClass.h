@@ -1,22 +1,25 @@
 #pragma once
 
+class Board;
 #include "FiguresEnums.h"
-#include "BoardClass.h"
 
 typedef unsigned char uchar;
 
 class TFigure
 {
 public:
-	uchar _posX, _posY;
+	uchar posX, posY;
 
 	TFigure(Board *board, FigureType figureType, uchar posX, uchar posY);
 	virtual ~TFigure();
-	virtual Situations Situation();
+	virtual char* Situation();
+	FigureClass GetClass();
+	FigureType GetType();
 protected:
-	FigureClass _figureClass;
-private:
+	virtual Situations _Situation();
+	FigureClass _figureClass; // класс: (король, ладья)
+	FigureType _figureType; // тип: (белые, черные)
 	Board *_board;
-	FigureType _figureType;
+private:
 	bool constructSuccess;
 };

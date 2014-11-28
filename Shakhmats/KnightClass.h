@@ -10,5 +10,6 @@ public:
 	{
 		this->_figureClass = KNIGHT;
 	}
-	Situations Situation();
+protected:
+	Situations _Situation();
 };
